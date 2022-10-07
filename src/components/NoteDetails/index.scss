@@ -1,0 +1,46 @@
+.notedetails{
+    padding: 10px;
+    width: 70%;
+    background-color: white;
+    height: 50vh;
+    &__header{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        &--info{
+            display: flex; 
+            gap: 3px;
+            align-items: center;
+          
+        }
+        &--button{
+            position: absolute;
+            top: 10px;
+            right: 0;
+            width: 100px;
+            height: 35px;
+            cursor: pointer;
+        }
+        &--input{
+            width: 70%;
+            border: none;
+            input{
+                border: none;
+                font-size: 25px;
+                padding: 1px;
+            }
+        }
+    }
+    &__editor{
+        margin-top: 20px;
+        border-top: 1px solid lightgray;
+        &--textarea{
+            textarea{
+                min-height: 20vh;
+                resize: none;
+                border: none;
+            }
+        }
+    }
+}

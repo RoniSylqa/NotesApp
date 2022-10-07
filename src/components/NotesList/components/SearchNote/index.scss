@@ -1,0 +1,18 @@
+.searchnote{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    &__input{
+        input{
+            height: 35px;
+            border: 1px solid #083AA9;
+        }
+    }
+    &__button{
+        background-color: #083AA9;
+        width: 40%;
+        height: 35px;
+        cursor: pointer;
+    }
+}

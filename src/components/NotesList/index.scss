@@ -1,0 +1,11 @@
+.noteslist {
+  width: 30%;
+  &__button {
+    height: 35px;
+    width: 100%;
+    margin-top: 10px;
+    &.first {
+      margin-top: 40px;
+    }
+  }
+}

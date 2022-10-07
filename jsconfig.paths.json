@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@scheduleComponents/*": ["src/all/scheduleComponents/*"],
+      "@reduxComponents/*": ["src/all/reduxComponents/*"],
+      "@common/*": ["src/common/*"],
+      "@assets/*": ["src/assets/*"],
+      "@img/*": ["src/assets/img/*"],
+      "@sagas/*": ["src/store/sagas/app/*"],
+      "@components/*": ["src/components/*"],
+      "@utils/*": ["src/utils/*"]
+    }
+  }
+}
+  

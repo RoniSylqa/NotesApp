@@ -1,0 +1,13 @@
+.button {
+  position: relative;
+  float: left;
+  height: 50px;
+  background-color: #083aa9;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  &__disabled {
+    background-color: #4270d1;
+    cursor: not-allowed;
+  }
+}

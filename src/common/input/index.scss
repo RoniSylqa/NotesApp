@@ -1,0 +1,14 @@
+.form_input {
+    padding: 5px 0;
+    input {
+        width: 100%;
+        background-color: #fff;
+        height: 50px;
+        outline: none;
+    }
+    &--error{
+        color: red;
+        font-size: 13px;
+
+    }
+}
