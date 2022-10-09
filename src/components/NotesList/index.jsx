@@ -6,10 +6,12 @@ import ButtonComponent from "@common/button";
 import SearchNote from "./components/SearchNote";
 import SingleNote from "./components/SingleNote";
 import "./index.scss";
+import AddCatgory from "./components/AddCategory";
 
 const NotesList = (props) => {
 	const {allNotes, setActiveNote, activeNote, setNoteToBlank, filteredNotes} = props;
 	const [notes, setNotes] = useState(allNotes);
+	const [show, setShow] = useState(false);
 
 	useEffect(() => {
 		if (filteredNotes?.length > 0) {
@@ -36,7 +38,12 @@ const NotesList = (props) => {
 				disabled={!activeNote?.id}
 				onClick={() => setNoteToBlank()}
 			/>
-			<ButtonComponent buttonText="Create new category" className="noteslist__button" />
+			<ButtonComponent
+				onClick={() => setShow(!show)}
+				buttonText="Create new category"
+				className="noteslist__button"
+			/>
+			<AddCatgory hide={!show} />
 		</div>
 	);
 };

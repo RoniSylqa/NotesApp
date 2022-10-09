@@ -1,0 +1,15 @@
+.form_input {
+    padding: 5px 0;
+  
+    &--error{
+        color: red;
+        font-size: 13px;
+
+    }
+    &__select{
+        width: 200px;
+        input{
+            height: 30px;
+        }
+    }
+}

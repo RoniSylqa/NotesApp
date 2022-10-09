@@ -13,6 +13,7 @@ const NoteDetails = (props) => {
 	const validationSchema = yup.object().shape({
 		title: yup.string().required("Title is required"),
 		description: yup.string().required("Description is required"),
+		categoryName: yup.object().nullable().required("Category is required"),
 	});
 
 	const formik = {
@@ -22,6 +23,7 @@ const NoteDetails = (props) => {
 			enableReinitialize: true,
 			onSubmit: (fieldValues) => {
 				addNote(fieldValues);
+				formik.resetForm();
 				filterNotes("");
 				setSearchValue("");
 			},
