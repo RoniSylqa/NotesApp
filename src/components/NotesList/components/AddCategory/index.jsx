@@ -10,13 +10,13 @@ import "./index.scss";
 const AddCategory = (props) => {
 	const {addCategory, hide, toggleAddCategory} = props;
 	const validationSchema = yup.object().shape({
-		categoryName: yup.string().required("Category Name is required"),
+		categoryObj: yup.string().required("Category Name is required"),
 	});
 
 	const formik = {
 		...useFormik({
 			validationSchema,
-			initialValues: {categoryName: ""},
+			initialValues: {categoryObj: ""},
 			enableReinitialize: true,
 			onSubmit: (fieldValues) => {
 				addCategory(fieldValues);
@@ -31,7 +31,7 @@ const AddCategory = (props) => {
 				placeholder="Category Name"
 				className="addCategory__input"
 				formData={formik}
-				name="categoryName"
+				name="categoryObj"
 			/>
 			<ButtonComponent
 				className="addCategory__button"

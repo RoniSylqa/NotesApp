@@ -39,7 +39,7 @@ const SelectInput = (props) => {
 	return (
 		<div className={`form_input ${errors && touched ? "error" : ""} ${className}`}>
 			<Select
-				className="form_input__select"
+				className={`form_input__select $ ${className}`}
 				placeholder={placeholder}
 				styles={customStyles}
 				options={options}

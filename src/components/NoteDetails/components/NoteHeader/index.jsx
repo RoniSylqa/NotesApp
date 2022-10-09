@@ -12,7 +12,7 @@ const NoteHeader = ({activeNote, formData, allCategories}) => (
 			<>
 				<Typo isTitle>{activeNote?.title}</Typo>
 				<div className="notedetails__header--info">
-					<Typo> {activeNote?.categoryName?.label} </Typo> -
+					<Typo> {activeNote?.categoryObj?.label} </Typo> -
 					<Typo>{activeNote?.createdAt}</Typo>
 				</div>
 			</>
@@ -26,7 +26,7 @@ const NoteHeader = ({activeNote, formData, allCategories}) => (
 				/>
 				<div className="notedetails__header--info">
 					<SelectInput
-						name="categoryName"
+						name="categoryObj"
 						formData={formData}
 						options={allCategories}
 						placeholder="Select Category..."

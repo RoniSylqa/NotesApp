@@ -7,6 +7,7 @@ import SearchNote from "./components/SearchNote";
 import SingleNote from "./components/SingleNote";
 import "./index.scss";
 import AddCatgory from "./components/AddCategory";
+import FilterCategory from "./components/FilterCategory";
 
 const NotesList = (props) => {
 	const {allNotes, setActiveNote, activeNote, setNoteToBlank, filteredNotes} = props;
@@ -26,6 +27,7 @@ const NotesList = (props) => {
 	return (
 		<div className="noteslist">
 			<SearchNote />
+			<FilterCategory />
 			{notes.length ? <Typo>All Notes</Typo> : <Typo>No Notes Found!</Typo>}
 			{notes.map((item) => (
 				<SingleNote

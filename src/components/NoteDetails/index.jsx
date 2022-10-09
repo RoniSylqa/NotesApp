@@ -8,12 +8,12 @@ import NoteHeader from "./components/NoteHeader";
 import "./index.scss";
 
 const NoteDetails = (props) => {
-	const {addNote, activeNote, filterNotes, setSearchValue} = props;
+	const {addNote, activeNote, filterNotes, setSearchValue, setSelectedCategory} = props;
 
 	const validationSchema = yup.object().shape({
 		title: yup.string().required("Title is required"),
 		description: yup.string().required("Description is required"),
-		categoryName: yup.object().nullable().required("Category is required"),
+		categoryObj: yup.object().nullable().required("Category is required"),
 	});
 
 	const formik = {
@@ -26,6 +26,7 @@ const NoteDetails = (props) => {
 				formik.resetForm();
 				filterNotes("");
 				setSearchValue("");
+				setSelectedCategory(null);
 			},
 		}),
 	};
@@ -47,5 +48,6 @@ const mapDispatchToProps = {
 	addNote: appActions.addNote,
 	filterNotes: appActions.filterNotes,
 	setSearchValue: appActions.setSearchValue,
+	setSelectedCategory: appActions.setSelectedCategory,
 };
 export default connect(mapStateToProps, mapDispatchToProps)(NoteDetails);
