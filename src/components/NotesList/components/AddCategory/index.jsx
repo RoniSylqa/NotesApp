@@ -8,7 +8,7 @@ import ButtonComponent from "@common/button";
 import "./index.scss";
 
 const AddCategory = (props) => {
-	const {addCategory, hide} = props;
+	const {addCategory, hide, toggleAddCategory} = props;
 	const validationSchema = yup.object().shape({
 		categoryName: yup.string().required("Category Name is required"),
 	});
@@ -21,6 +21,7 @@ const AddCategory = (props) => {
 			onSubmit: (fieldValues) => {
 				addCategory(fieldValues);
 				formik.resetForm();
+				toggleAddCategory();
 			},
 		}),
 	};

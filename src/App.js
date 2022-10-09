@@ -10,7 +10,7 @@ const App = () => (
 			toastOptions={{
 				className: "toaster",
 			}}
-			position="top-right"
+			position="top-center"
 			reverseOrder={false}
 		/>
 	</div>

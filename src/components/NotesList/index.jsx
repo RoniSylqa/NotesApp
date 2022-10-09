@@ -13,6 +13,8 @@ const NotesList = (props) => {
 	const [notes, setNotes] = useState(allNotes);
 	const [show, setShow] = useState(false);
 
+	const toggleAddCategory = () => setShow(!show);
+
 	useEffect(() => {
 		if (filteredNotes?.length > 0) {
 			setNotes([...filteredNotes]);
@@ -38,12 +40,14 @@ const NotesList = (props) => {
 				disabled={!activeNote?.id}
 				onClick={() => setNoteToBlank()}
 			/>
-			<ButtonComponent
-				onClick={() => setShow(!show)}
-				buttonText="Create new category"
-				className="noteslist__button"
-			/>
-			<AddCatgory hide={!show} />
+			{!show && (
+				<ButtonComponent
+					onClick={() => toggleAddCategory()}
+					buttonText="Create new category"
+					className="noteslist__button"
+				/>
+			)}
+			<AddCatgory hide={!show} toggleAddCategory={toggleAddCategory} />
 		</div>
 	);
 };
